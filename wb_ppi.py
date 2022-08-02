@@ -2,19 +2,19 @@ import warnings
 
 warnings.filterwarnings("ignore")
 
-from strategies import strategies
-import atlases
-
 import argparse
-from load_confounds import Confounds
-from bids.layout import parse_file_entities
 from pathlib import Path
+
 import numpy as np
 import pandas as pd
-
-from nilearn.input_data import NiftiLabelsMasker
+from bids.layout import parse_file_entities
+from load_confounds import Confounds
 from nilearn.glm.first_level import make_first_level_design_matrix
+from nilearn.input_data import NiftiLabelsMasker
 from sklearn.linear_model import LinearRegression
+
+import atlases
+from strategies import strategies
 
 
 def get_args():

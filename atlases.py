@@ -1,5 +1,5 @@
-from nilearn import datasets, input_data, plotting
 import pandas as pd
+from nilearn import datasets, input_data, plotting
 
 atlas_options = ["yeo2011", "schaefer2018", "difumo2020", "ajd2021", "harvox2006"]
 
