@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 
 path = Path("/Volumes/MRI/mfc")
-wb_ppi = path / "derivatives/wb_ppi"
+wb_ppi = path / "derivatives/wb-ppi"
 subjects = BIDSLayout(
     root=path / "rawdata", validate=False, index_metadata=False
 ).get_subjects()

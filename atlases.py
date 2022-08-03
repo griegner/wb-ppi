@@ -76,7 +76,7 @@ class Atlas:
             "smoothing_fwhm": smooth_fwhm,
             "standardize": True,
             "standardize_confounds": True,
-            "memory": str(derivatives / ".wb_ppi_cache"),
+            "memory": str(derivatives / "wb-ppi-cache"),
             "memory_level": 3,
         }
 

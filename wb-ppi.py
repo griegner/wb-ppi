@@ -72,7 +72,7 @@ def get_linear_model():
 
 
 def build_path(derivatives, sub, task, strategy, atlas):
-    path = derivatives / f"wb_ppi/sub-{sub}"
+    path = derivatives / f"wb-ppi/sub-{sub}"
     path.mkdir(parents=True, exist_ok=True)
     # BIDS pattern: sub-{subject}_task-{task}_atlas-{atlas}_strat-{strategy}_{suffix}.{extension}
     return path / f"sub-{sub}_task-{task}_atlas-{atlas}_strat-{strategy}_ppi.npy"
@@ -151,7 +151,7 @@ def main():
         ppi_vect = fit_ppi(ts_rois, dm, model)
         np.save(path_ppi, ppi_vect)
 
-    path = derivatives / f"wb_ppi/group/atlas-{atlas.title}"
+    path = derivatives / f"wb-ppi/group/atlas-{atlas.title}"
     path.mkdir(parents=True, exist_ok=True)
 
     save_df(path, atlas)
